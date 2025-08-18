@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gary Welsh Photography</title>
+  <meta name="description" content="Capturing moments, one click at a time." />
+  <meta property="og:title" content="Gary Welsh Photography — Photographer Portfolio" />
+  <meta property="og:description" content="Capturing moments, one click at a time." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0e0e0e" />
+
+  <link rel="preload" href="styles.css" as="style" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-sticky>
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Homepage"><span class="logo-img"><img src="assets/logo.png"></span>Gary Welsh Photography</a>
+
+      <button class="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="primary-nav" class="nav">
+        <ul>
+          <li><a href="#work">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO / SLIDESHOW -->
+    <section class="hero" aria-label="Featured work">
+      <div class="slides" data-autoplay="true" data-interval="6000">
+        <!-- Replace src with your images -->
+        <figure class="slide is-active">
+          <img src="assets/hero-1.jpg" alt="[placeholder] Hero photo 1 alt" loading="eager" />
+          <figcaption class="visually-hidden">[placeholder] Caption 1</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/hero-2.jpg" alt="[placeholder] Hero photo 2 alt" loading="lazy" />
+          <figcaption class="visually-hidden">[placeholder] Caption 2</figcaption>
+        </figure>
+        <figure class="slide">
+          <img src="assets/hero-3.jpg" alt="[placeholder] Hero photo 3 alt" loading="lazy" />
+          <figcaption class="visually-hidden">[placeholder] Caption 3</figcaption>
+        </figure>
+
+        <div class="hero-controls">
+          <button class="prev" aria-label="Previous slide">‹</button>
+          <button class="next" aria-label="Next slide">›</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section banner">
+      <div class="banner-inner">
+        <img src="assets/logo.png" alt="Banner image" loading="lazy" />
+        <h1>Gary Welsh<br>Photography</h1>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO / FILTERS -->
+    <section id="work" class="section container">
+      <header class="section-header">
+        <h2>Portfolio</h2>
+        <p class="section-sub">Faces, smiles, and stories from my recent shoots.</p>
+      </header>
+
+      <div class="filters" role="tablist" aria-label="Portfolio filters">
+        <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter" data-filter="studio" role="tab" aria-selected="false">Studio</button>
+        <button class="filter" data-filter="wedding" role="tab" aria-selected="false">Wedding</button>
+        <button class="filter" data-filter="events" role="tab" aria-selected="false">Events</button>
+      </div>
+
+      <div class="grid">
+        <!-- Each item: replace img src & alt; set data-cat(s) -->
+        <a href="assets/portrait-01.jpg" class="item" data-cat="studio" aria-label="Open image">
+          <img src="assets/portrait-01-thumb.jpg" alt="[placeholder] Portrait 01" loading="lazy" />
+        </a>
+        <a href="assets/portrait-02.jpg" class="item" data-cat="wedding">
+          <img src="assets/portrait-02-thumb.jpg" alt="[placeholder] Portrait 02" loading="lazy" />
+        </a>
+        <a href="assets/portrait-03.jpg" class="item" data-cat="events">
+          <img src="assets/portrait-03-thumb.jpg" alt="[placeholder] Portrait 03" loading="lazy" />
+        </a>
+        <a href="assets/portrait-04.jpg" class="item" data-cat="studio">
+          <img src="assets/portrait-04-thumb.jpg" alt="[placeholder] Portrait 04" loading="lazy" />
+        </a>
+        <a href="assets/portrait-05.jpg" class="item" data-cat="wedding">
+          <img src="assets/portrait-05-thumb.jpg" alt="[placeholder] Portrait 05" loading="lazy" />
+        </a>
+        <a href="assets/portrait-06.jpg" class="item" data-cat="events">
+          <img src="assets/portrait-06-thumb.jpg" alt="[placeholder] Portrait 06" loading="lazy" />
+        </a>
+        <a href="assets/portrait-07.jpg" class="item" data-cat="studio">
+          <img src="assets/portrait-07-thumb.jpg" alt="[placeholder] Portrait 07" loading="lazy" />
+        </a>
+        <a href="assets/portrait-08.jpg" class="item" data-cat="wedding">
+          <img src="assets/portrait-08-thumb.jpg" alt="[placeholder] Portrait 08" loading="lazy" />
+        </a>
+        <a href="assets/portrait-09.jpg" class="item" data-cat="events">
+          <img src="assets/portrait-09-thumb.jpg" alt="[placeholder] Portrait 09" loading="lazy" />
+        </a>
+        <a href="assets/portrait-10.jpg" class="item" data-cat="studio">
+          <img src="assets/portrait-10-thumb.jpg" alt="[placeholder] Portrait 10" loading="lazy" />
+        </a>
+        <a href="assets/portrait-11.jpg" class="item" data-cat="wedding">
+          <img src="assets/portrait-11-thumb.jpg" alt="[placeholder] Portrait 11" loading="lazy" />
+        </a>
+        <a href="assets/portrait-12.jpg" class="item" data-cat="events">
+          <img src="assets/portrait-12-thumb.jpg" alt="[placeholder] Portrait 12" loading="lazy" />
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section section-alt">
+      <div class="container about-grid">
+        <div class="about-media">
+          <img src="assets/about-portrait.jpg" alt="[placeholder] Your portrait" loading="lazy" />
+        </div>
+        <div class="about-copy">
+          <h2>About</h2>
+          <p>Hi. I’m Gary. From developing black-and-white film with my grandad to shooting in a commercial studio, photography has always been my world. I started as a retoucher in 2000 and soon moved behind the camera—since then I’ve worked across fashion, weddings, portraits, corporate and commercial, with work appearing on magazine covers.
+</p>
+          <p>Photos are for remembering and smiling over. My style isn’t rigid—I want you to relax, have fun, and see your personality shine through. If you like what you see and feel my approach fits, I’d love to hear from you.</p>
+          <ul class="about-meta">
+            <li><strong>Location:</strong> Adelaide, Australia</li>
+            <li><strong>Available for:</strong> Portraits, Weddings, Events, Commercial, Photo Editing</li>
+            <li><strong>Email:</strong> <a href="mailto:garywelsh42@gmail.com">garywelsh42@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section container">
+      <header class="section-header contact-header">
+        <h2>Contact</h2>
+        <p class="section-sub">For bookings and inquiries, use the form or email <a href="mailto:garywelsh42@gmail.com">garywelsh42@gmail.com</a>.</p>
+      </header>
+
+      <form class="contact-form" action="#" method="post" netlify>
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Your name" required />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" placeholder="your@email.com" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required></textarea>
+        </div>
+        <button type="submit" class="btn">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Gary Welsh Photography — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+    <button class="lightbox-close"></button>
+    <button class="lightbox-prev"></button>
+    <img class="lightbox-img" alt="[placeholder] Enlarged portfolio image" />
+    <button class="lightbox-next"></button>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
