@@ -70,16 +70,34 @@
     });
   });
 
-  // Contact Form
-  document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector(".contact-form");
-    const successMessage = document.getElementById("successMessage");
+  // Thank you message
+  const form = document.getElementById('contact-form');
+  const thankYou = document.getElementById('successMessage');
+  const formWrapper = document.getElementById('form-wrapper');
 
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // Prevent instant reload
-      form.classList.add("hidden");
-      successMessage.classList.remove("hidden");
-    });
+  form.addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent default form action
+
+    // Use AJAX to submit form to Formspree
+    const data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        Accept: 'application/json'
+      }
+    })
+      .then(response => {
+        if (response.ok) {
+          formWrapper.style.display = 'none';
+          thankYou.classList.remove('hidden');
+        } else {
+          alert("There was a problem submitting the form.");
+        }
+      })
+      .catch(() => {
+        alert("Something went wrong!");
+      });
   });
 
   // Lightbox

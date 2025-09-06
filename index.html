@@ -258,7 +258,7 @@
           <ul class="about-meta">
             <li><strong>Location:</strong> Adelaide, Australia</li>
             <li><strong>Available for:</strong> Portraits, Weddings, Events, Commercial, Photo Editing</li>
-            <li><strong>Email:</strong> <a href="mailto:garywelsh42@gmail.com">garywelsh42@gmail.com</a></li>
+            <li><strong>Email:</strong> <a href="mailto:welsh.gary@gmail.com">welsh.gary@gmail.com</a></li>
           </ul>
         </div>
       </div>
@@ -268,24 +268,25 @@
     <section id="contact" class="section container">
       <header class="section-header contact-header">
         <h2>Contact</h2>
-        <p class="section-sub">For bookings and inquiries, use the form or email <a href="mailto:garywelsh42@gmail.com">garywelsh42@gmail.com</a>.</p>
+        <p class="section-sub">For bookings and inquiries, use the form or email <a href="mailto:welsh.gary@gmail.com">welsh.gary@gmail.com</a>.</p>
       </header>
-
-      <form class="contact-form" action="https://formspree.io/f/mqadwzpz" method="POST">
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" placeholder="Your name" required />
-        </div>
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" placeholder="your@email.com" required />
-        </div>
-        <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required></textarea>
-        </div>
-        <button type="submit" class="btn">Send</button>
-      </form>
+      <div id="form-wrapper">
+        <form class="contact-form" method="POST" action="https://formspree.io/f/mqadwzpz" id="contact-form">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send</button>
+        </form>
+      </div>
       <div id="successMessage" class="success-message hidden">
         <h3>Thanks for reaching out!</h3>
         <p>Your message has been sent successfully. I’ll get back to you soon.</p>
