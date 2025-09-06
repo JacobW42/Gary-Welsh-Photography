@@ -271,7 +271,7 @@
         <p class="section-sub">For bookings and inquiries, use the form or email <a href="mailto:garywelsh42@gmail.com">garywelsh42@gmail.com</a>.</p>
       </header>
 
-      <form class="contact-form" action="#" method="post" netlify>
+      <form class="contact-form" action="https://formspree.io/f/mqadwzpz" method="POST">
         <div class="form-row">
           <label for="name">Name</label>
           <input id="name" name="name" type="text" placeholder="Your name" required />
@@ -286,6 +286,10 @@
         </div>
         <button type="submit" class="btn">Send</button>
       </form>
+      <div id="successMessage" class="success-message hidden">
+        <h3>Thanks for reaching out!</h3>
+        <p>Your message has been sent successfully. I’ll get back to you soon.</p>
+      </div>
     </section>
   </main>
 

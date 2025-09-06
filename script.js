@@ -70,6 +70,18 @@
     });
   });
 
+  // Contact Form
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".contact-form");
+    const successMessage = document.getElementById("successMessage");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault(); // Prevent instant reload
+      form.classList.add("hidden");
+      successMessage.classList.remove("hidden");
+    });
+  });
+
   // Lightbox
   const lb = $('.lightbox');
   const lbImg = $('.lightbox-img', lb);
