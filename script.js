@@ -1,13 +1,3 @@
-// Pre loader for Img elements
-document.addEventListener("DOMContentLoaded", () => {
-  const imageLinks = document.querySelectorAll(".item img");
-
-  imageLinks.forEach(img => {
-    const preload = new Image();
-    preload.src = img.src; // or the high-res version if you have separate URLs
-  });
-});
-
 // Basic interactions: mobile nav, hero slideshow, filters, lightbox, year
 (function(){
   const $ = (sel, ctx=document)=>ctx.querySelector(sel);
@@ -118,6 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const lbClose = $('.lightbox-close', lb);
   let lbIndex = -1;
   const gallery = items;
+  window.items = items;
 
   function openLightbox(i){
     lbIndex = i;
@@ -152,5 +143,21 @@ document.addEventListener("DOMContentLoaded", () => {
     if(e.key === 'Escape') closeLightbox();
     if(e.key === 'ArrowLeft') prevImg();
     if(e.key === 'ArrowRight') nextImg();
+  });
+
+  // Preload all lightbox images after page load
+  window.addEventListener("load", () => {
+    if (!window.items) return; // safety check
+
+    console.log(`[Preload] Found ${items.length} gallery images.`);
+
+    items.forEach((el, i) => {
+      const href = el.getAttribute("href");
+      if (!href) return;
+      const preload = new Image();
+      preload.onload = () => console.log(`[Preload] ${i+1}/${items.length}: ${href}`);
+      preload.onerror = () => console.warn(`[Preload failed] ${href}`);
+      preload.src = href;
+    });
   });
 })();
