@@ -1,3 +1,13 @@
+// Pre loader for Img elements
+document.addEventListener("DOMContentLoaded", () => {
+  const imageLinks = document.querySelectorAll(".item img");
+
+  imageLinks.forEach(img => {
+    const preload = new Image();
+    preload.src = img.src; // or the high-res version if you have separate URLs
+  });
+});
+
 // Basic interactions: mobile nav, hero slideshow, filters, lightbox, year
 (function(){
   const $ = (sel, ctx=document)=>ctx.querySelector(sel);
