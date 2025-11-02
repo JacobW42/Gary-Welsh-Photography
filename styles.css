@@ -353,9 +353,22 @@ figure {
   width: 75%;
 }
 
-.about-copy h2{ font-size: var(--h2); margin-top:0; }
-.about-meta{ list-style:none; padding:0; margin: 14px 0 0; color: var(--muted); }
-.about-meta li{ margin:6px 0; }
+.about-copy h2{
+  font-size: var(--h2);
+  margin-top:0;
+}
+
+.about-meta{
+  list-style:none;
+  padding:0;
+  margin: 14px 0 0;
+  color: var(--muted);
+}
+
+.about-meta li{
+  margin:6px 0;
+}
+
 @media (max-width: 900px){
   .about-grid{ grid-template-columns: 1fr; }
 }
